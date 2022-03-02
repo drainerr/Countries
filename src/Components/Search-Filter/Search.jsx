@@ -5,7 +5,7 @@ const StyledSearch = styled.div`
   align-items: center;
   background-color: white;
   font-size: 1.3em;
-  max-width: 30%;
+  min-width: 30%;
   color: gray;
   padding: 10px;
   border-radius: 5px;
