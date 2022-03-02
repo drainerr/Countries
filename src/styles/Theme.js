@@ -15,6 +15,7 @@ const theme = {
     detailPg: '16px',
   },
   mobile: '375px',
+  tablet: '768',
   desktop: '1440px',
 };
 
