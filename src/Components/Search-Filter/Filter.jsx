@@ -1,15 +1,17 @@
 import styled from 'styled-components';
-import { BiChevronDown } from 'react-icons/bi';
+import { BiChevronDown, BiChevronUp } from 'react-icons/bi';
 import Regions from './Regions';
+import { useContext, useState } from 'react';
+import { CountriesCtx } from '../../contexts/countriesCtx';
 
 const StyledFilter = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: white;
+  background-color: ${({ theme, dark }) => theme[`${dark}`].elements};
+  color: ${({ theme, dark }) => theme[`${dark}`].text};
   padding: 10px;
   font-size: 110%;
-  color: black;
   border-radius: 5px;
   font-weight: 600;
   box-shadow: 0px 0px 2px darkgray;
@@ -24,6 +26,8 @@ const StyledFilter = styled.div`
   span:hover {
     cursor: pointer;
   }
+  user-select: none;
+  transition: color 1s ease-out, background-color 0.25s ease-out;
 `;
 
 const StyledWrapper = styled.div`
@@ -32,15 +36,17 @@ const StyledWrapper = styled.div`
 `;
 
 const Filter = () => {
+  const { dark } = useContext(CountriesCtx);
+  const [showMenu, setShowMenu] = useState(false);
   return (
     <StyledWrapper>
-      <StyledFilter>
+      <StyledFilter dark={dark ? 'dark' : 'light'}>
         <p>Filter by Region</p>
-        <span onClick={console.log('when i click this dropdown menu should appear')}>
-          <BiChevronDown />
+        <span onClick={() => setShowMenu(!showMenu)}>
+          {showMenu ? <BiChevronUp /> : <BiChevronDown />}
         </span>
       </StyledFilter>
-      <Regions />
+      <Regions show={showMenu} />
     </StyledWrapper>
   );
 };
