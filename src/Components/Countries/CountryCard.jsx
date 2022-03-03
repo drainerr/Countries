@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import styled from 'styled-components';
 import { CountriesCtx } from '../../contexts/countriesCtx';
+import { useHistory } from 'react-router-dom';
 
 const StyledCard = styled.li`
   width: 250px;
@@ -41,9 +42,10 @@ const StyledCard = styled.li`
 
 const CountryCard = (props) => {
   const { dark } = useContext(CountriesCtx);
+  const history = useHistory();
   const { name, population, region, capital, img } = props;
   return (
-    <StyledCard dark={dark ? 'dark' : 'light'}>
+    <StyledCard dark={dark ? 'dark' : 'light'} onClick={() => history.push(`/countries/${name}`)}>
       <img src={img} alt="flag" />
       <h3>{name}</h3>
       <h4>

@@ -11,8 +11,9 @@ const CountriesContext = ({ children }) => {
       .then((res) => res.json())
       .then((data) => {
         setLoading(true);
-        const countryData = data.map((country) => {
+        const countryData = data.map((country, i) => {
           return {
+            id: i,
             name: country.name,
             nativeName: country.nativeName,
             population: country.population,

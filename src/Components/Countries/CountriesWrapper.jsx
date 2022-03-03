@@ -30,6 +30,7 @@ const Countries = () => {
           ? countries.map((country) => {
               return (
                 <CountryCard
+                  key={country.id}
                   img={country.flag}
                   name={country.name}
                   population={country.population}
@@ -38,7 +39,7 @@ const Countries = () => {
                 />
               );
             })
-          : 'loading...'}
+          : 'Loading...'}
       </ul>
     </StyledListWrapper>
   );
