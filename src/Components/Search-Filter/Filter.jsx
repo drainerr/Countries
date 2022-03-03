@@ -14,7 +14,7 @@ const StyledFilter = styled.div`
   font-size: 110%;
   border-radius: 5px;
   font-weight: 600;
-  box-shadow: 0px 0px 2px darkgray;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
   p {
     font-size: ${({ theme }) => theme.fontSize.homePg};
   }

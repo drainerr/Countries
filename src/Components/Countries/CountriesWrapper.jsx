@@ -5,11 +5,12 @@ import CountryCard from './CountryCard';
 
 const StyledListWrapper = styled.div`
   width: 90%;
+  margin-top: 2rem;
   margin-left: 5%;
   ul {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    gap: 50px;
     justify-content: space-between;
   }
 `;

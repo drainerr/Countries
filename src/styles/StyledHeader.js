@@ -36,7 +36,7 @@ const StyledHeader = styled.header`
     font-weight: 600;
   }
   transition: color 1s ease-out, background-color 0.25s ease-out;
-  box-shadow: 0 0 8px -5px black;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
 `;
 
 export default StyledHeader;

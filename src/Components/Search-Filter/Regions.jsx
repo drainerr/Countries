@@ -11,7 +11,8 @@ const StyledDropDownMenu = styled.ul`
   width: 100%;
   border-radius: 5px;
   margin-top: 0.3rem;
-  box-shadow: 0px 0px 2px darkgray;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+
   li {
     padding: 3px 10px;
     font-weight: 600;

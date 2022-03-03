@@ -12,7 +12,8 @@ const StyledSearch = styled.div`
   min-width: 30%;
   padding: 10px;
   border-radius: 5px;
-  box-shadow: 0px 0px 2px darkgray;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+
   input {
     border: none;
     outline: unset;
