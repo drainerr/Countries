@@ -7,6 +7,10 @@ const StyledFind = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media (max-width: 480px) {
+    align-items: flex-start;
+    flex-direction: column;
+  }
 `;
 
 const Find = () => {

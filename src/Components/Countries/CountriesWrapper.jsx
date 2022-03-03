@@ -7,12 +7,18 @@ const StyledListWrapper = styled.div`
   width: 90%;
   margin-top: 2rem;
   margin-left: 5%;
+  padding-bottom: 50px;
   ul {
     display: flex;
     flex-wrap: wrap;
-    gap: 50px;
+    gap: 70px 20px;
     justify-content: space-between;
   }
+  @media (max-width: 768px) {
+    ul {
+      justify-content: space-around;
+    }
+  } ;
 `;
 
 const Countries = () => {

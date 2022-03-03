@@ -14,7 +14,7 @@ const theme = {
     homePg: '14px',
     detailPg: '16px',
   },
-  mobile: '420px',
+  mobile: '480px',
   tablet: '768',
   desktop: '1440px',
 };

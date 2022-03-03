@@ -27,6 +27,10 @@ const StyledSearch = styled.div`
     }
   }
   transition: color 1s ease-out, background-color 0.25s ease-out;
+  @media (max-width: 480px) {
+    width: 100%;
+    margin-bottom: 2.5rem;
+  }
 `;
 
 const Search = () => {

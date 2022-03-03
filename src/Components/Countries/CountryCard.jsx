@@ -23,6 +23,20 @@ const StyledCard = styled.li`
   padding-bottom: 1.5rem;
   border-radius: 5px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+
+  @media (max-width: 960px) {
+    width: 200px;
+  }
+  @media (max-width: 480px) {
+    width: 100%;
+    padding-bottom: 2rem;
+    h4 {
+      font-size: 110%;
+    }
+    h3 {
+      font-size: 140%;
+    }
+  }
 `;
 
 const CountryCard = (props) => {
