@@ -44,7 +44,6 @@ const Search = () => {
       el.name.toLowerCase().startsWith(inputName)
     );
     setCountries(filteredCountries);
-    console.log(filteredCountries);
   };
 
   return (

@@ -38,7 +38,9 @@ const DetailedInfo = ({ country }) => {
         />
         <ul className="borders">
           <h4>Border Countries:</h4>
-          {borderCountries.length > 0 ? borderCountries.map((ctr) => <li>{`${ctr} `}</li>) : 'None'}
+          {borderCountries.length > 0
+            ? borderCountries.map((ctr, i) => <li key={i}>{`${ctr} `}</li>)
+            : 'None'}
         </ul>
       </div>
     </StyledDetailsWrapper>

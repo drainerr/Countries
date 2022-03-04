@@ -36,7 +36,6 @@ const Regions = ({ show }) => {
     const selectedRegion = e.innerText.trim();
     const filteredCountries = allCountries.filter((c) => c.region === selectedRegion);
     setCountries(filteredCountries);
-    console.log(filteredCountries);
   };
   const displayAll = () => {
     setCountries(allCountries);
