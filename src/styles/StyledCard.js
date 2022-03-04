@@ -16,7 +16,9 @@ const StyledCard = styled.li`
   }
   img {
     width: 100%;
+    height: 180px;
     border-radius: 5px 5px 0 0;
+    object-fit: cover;
   }
   padding-bottom: 1.5rem;
   border-radius: 5px;

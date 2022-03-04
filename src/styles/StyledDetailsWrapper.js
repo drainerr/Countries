@@ -8,7 +8,8 @@ const StyledDetailsWrapper = styled.div`
   color: ${({ theme, dark }) => theme[`${dark}`].text};
   img {
     max-width: 450px;
-    height:300px;
+    height:350px;
+    object-fit: cover;
     margin-right: 10%;
   }
   div {
@@ -50,7 +51,6 @@ const StyledDetailsWrapper = styled.div`
    img{
      max-width:100%;
      height:unset;
-     max-height:400px;
      margin:0;
      align-self:center;
    }
