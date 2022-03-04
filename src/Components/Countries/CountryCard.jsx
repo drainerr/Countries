@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { CountriesCtx } from '../../contexts/countriesCtx';
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import StyledCard from '../../styles/StyledCard';
 
 const CountryCard = (props) => {
