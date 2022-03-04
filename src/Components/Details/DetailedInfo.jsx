@@ -1,17 +1,72 @@
 import { useContext } from 'react';
 import styled from 'styled-components';
 import { CountriesCtx } from '../../contexts/countriesCtx';
+import ListWrapper from './List';
 
-const StyledDetails = styled.div`
+const StyledDetailsWrapper = styled.div`
   display: flex;
   width: 100%;
   align-items: center;
   justify-content: space-between;
   color: ${({ theme, dark }) => theme[`${dark}`].text};
   img {
-    width: 450px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+    max-width: 450px;
+    height:300px;
+    margin-right: 10%;
   }
+  div {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+  div h1 {
+    margin-bottom: 20px;
+  }
+  .borders{
+    display:flex;
+    gap:5px;
+    align-items:center;
+    margin-top:50px;
+    flex-wrap:wrap;
+  }
+  .borders li {
+    padding:2px 8px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,.15);
+    background-color: ${({ theme, dark }) => theme[`${dark}`].elements};
+    transition: color 1s ease-out, background-color .25s ease-out;
+
+  }
+  .borders h4{
+    margin-right: 10px;
+  }
+ }
+ @media(max-width:960px){
+   flex-direction:column;
+   align-items:start;
+   padding-bottom:50px;
+   div{
+     align-items:center;
+   }
+   div h1{
+     margin-top: 30px;
+   }
+   img{
+     width:100%;
+     max-width:unset;
+     height:unset;
+     max-height:350px;
+   }
+ }
+ @media(max-width:640px){
+   .borders h4{
+     width:100%;
+   }
+ }
+ @media(max-width:480px){
+   div{
+     align-items:start;
+   }
+ }
 `;
 
 const DetailedInfo = ({ country }) => {
@@ -31,44 +86,28 @@ const DetailedInfo = ({ country }) => {
   } = country;
 
   return (
-    <StyledDetails dark={dark ? 'dark' : 'light'}>
+    <StyledDetailsWrapper dark={dark ? 'dark' : 'light'}>
       <img src={flag} alt="flag" />
       <div>
         <h1>{name}</h1>
-        <h4>
-          <span>Native Name: </span>
-          {nativeName}
-        </h4>
-        <h4>
-          <span>Population: </span>
-          {population}
-        </h4>
-        <h4>
-          <span>Region: </span>
-          {region}
-        </h4>
-        <h4>
-          <span>Sub Region: </span>
-          {subregion}
-        </h4>
-        <h4>
-          <span>Capital: </span>
-          {capital}
-        </h4>
-        <h4>
-          <span>Top Level Domain: </span>
-          {domain}
-        </h4>
-        <h4>
-          <span>Currencies: </span>
-          {currencies.map((cur) => `${cur.name}`)}
-        </h4>
-        <h4>
-          <span>Languages: </span>
-          {languages.map((lng) => `${lng.name} `)}
-        </h4>
+        <ListWrapper
+          country={{
+            nativeName,
+            population,
+            region,
+            subregion,
+            capital,
+            domain,
+            currencies,
+            languages,
+          }}
+        />
+        <ul className="borders">
+          <h4>Border Countries:</h4>
+          {borderCountries.length > 0 ? borderCountries.map((ctr) => <li>{`${ctr} `}</li>) : 'None'}
+        </ul>
       </div>
-    </StyledDetails>
+    </StyledDetailsWrapper>
   );
 };
 
