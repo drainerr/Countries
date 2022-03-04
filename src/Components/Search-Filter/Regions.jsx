@@ -31,14 +31,24 @@ const StyledDropDownMenu = styled.ul`
 `;
 
 const Regions = ({ show }) => {
-  const { dark } = useContext(CountriesCtx);
+  const { dark, allCountries, setCountries, countries } = useContext(CountriesCtx);
+  const filterList = (e) => {
+    const selectedRegion = e.innerText.trim();
+    const filteredCountries = allCountries.filter((c) => c.region === selectedRegion);
+    setCountries(filteredCountries);
+    console.log(filteredCountries);
+  };
+  const displayAll = () => {
+    setCountries(allCountries);
+  };
   return (
     <StyledDropDownMenu dark={dark ? 'dark' : 'light'} show={show}>
-      <li>Africa</li>
-      <li>America</li>
-      <li>Asia</li>
-      <li>Europe</li>
-      <li>Oceania</li>
+      <li onClick={() => displayAll()}>Any</li>
+      <li onClick={({ target }) => filterList(target)}>Africa</li>
+      <li onClick={({ target }) => filterList(target)}>Americas</li>
+      <li onClick={({ target }) => filterList(target)}>Asia</li>
+      <li onClick={({ target }) => filterList(target)}>Europe</li>
+      <li onClick={({ target }) => filterList(target)}>Oceania</li>
     </StyledDropDownMenu>
   );
 };

@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { IoMdSearch } from 'react-icons/io';
 import { useContext } from 'react';
 import { CountriesCtx } from '../../contexts/countriesCtx';
+import { useState } from 'react';
 
 const StyledSearch = styled.div`
   display: flex;
@@ -34,11 +35,28 @@ const StyledSearch = styled.div`
 `;
 
 const Search = () => {
-  const { dark } = useContext(CountriesCtx);
+  const { dark, setCountries, allCountries } = useContext(CountriesCtx);
+  const [value, setValue] = useState('');
+  const handleChange = (e) => {
+    setValue(e.value);
+    const inputName = e.value.toLowerCase();
+    const filteredCountries = allCountries.filter((el) =>
+      el.name.toLowerCase().startsWith(inputName)
+    );
+    setCountries(filteredCountries);
+    console.log(filteredCountries);
+  };
+
   return (
     <StyledSearch dark={dark ? 'dark' : 'light'}>
       <IoMdSearch />
-      <input type="text" placeholder="Search for a country..." />
+      <input
+        type="text"
+        placeholder="Search for a country..."
+        value={value}
+        onChange={({ target }) => handleChange(target)}
+        onBlur={() => setValue('')}
+      />
     </StyledSearch>
   );
 };

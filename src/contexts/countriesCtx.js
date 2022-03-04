@@ -3,6 +3,7 @@ export const CountriesCtx = createContext();
 
 const CountriesContext = ({ children }) => {
   const [dark, setDark] = useState(false);
+  const [allCountries, setAllCountries] = useState([]);
   const [countries, setCountries] = useState([]);
   const [loading, setLoading] = useState(false);
   const [fetched, setFetched] = useState(false);
@@ -28,12 +29,15 @@ const CountriesContext = ({ children }) => {
           };
         });
         setFetched(true);
+        setAllCountries(countryData);
         setCountries(countryData);
         setLoading(false);
       });
   }, []);
   return (
-    <CountriesCtx.Provider value={{ dark, setDark, countries, loading, fetched }}>
+    <CountriesCtx.Provider
+      value={{ dark, setDark, allCountries, countries, setCountries, loading, fetched }}
+    >
       {children}
     </CountriesCtx.Provider>
   );
