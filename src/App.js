@@ -6,6 +6,7 @@ import { CountriesCtx } from './contexts/countriesCtx';
 import Countries from './Components/Countries/CountriesWrapper';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Redirect } from 'react-router-dom';
+import Details from './Components/Details/Details';
 
 function App() {
   const { dark } = useContext(CountriesCtx);
@@ -19,7 +20,9 @@ function App() {
             <Find />
             <Countries />
           </Route>
-          <Route path="/countries/:name"></Route>
+          <Route path="/countries/:name">
+            <Details />
+          </Route>
           <Route path="*">
             <Redirect to="/" />
           </Route>
