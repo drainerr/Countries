@@ -15,14 +15,14 @@ const StyledCard = styled.li`
   }
   img {
     width: 100%;
+    height: 160px;
     border-radius: 5px 5px 0 0;
     object-fit: cover;
   }
   padding-bottom: 1.5rem;
   border-radius: 5px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-
-  @media (max-width: 640px) {
+  @media (max-width: 620px) {
     width: 100%;
     padding-bottom: 2rem;
     h4 {
@@ -30,6 +30,9 @@ const StyledCard = styled.li`
     }
     h3 {
       font-size: 140%;
+    }
+    img {
+      height: unset;
     }
   }
 `;

@@ -13,11 +13,6 @@ const StyledListWrapper = styled.div`
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 50px;
   }
-  @media (max-width: 768px) {
-    ul {
-      justify-content: space-around;
-    }
-  } ;
 `;
 
 const Countries = () => {
