@@ -10,7 +10,7 @@ const StyledListWrapper = styled.div`
   padding-bottom: 50px;
   ul {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
     gap: 50px;
   }
 `;
