@@ -2,6 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 const GlobalStyle = createGlobalStyle`
 html{
     font-size: 100%;
+    overflow-y:scroll;
 }
 *{
     margin:0;

@@ -9,10 +9,9 @@ const StyledListWrapper = styled.div`
   margin-left: 5%;
   padding-bottom: 50px;
   ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 70px 20px;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 50px;
   }
   @media (max-width: 768px) {
     ul {
