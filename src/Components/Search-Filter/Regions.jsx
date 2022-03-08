@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import styled from 'styled-components';
 import { CountriesCtx } from '../../contexts/countriesCtx';
 
+import React from 'react';
 const StyledDropDownMenu = styled.ul`
   position: absolute;
   padding: 10px;

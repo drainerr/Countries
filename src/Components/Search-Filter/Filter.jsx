@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from 'styled-components';
 import { BiChevronDown, BiChevronUp } from 'react-icons/bi';
 import Regions from './Regions';

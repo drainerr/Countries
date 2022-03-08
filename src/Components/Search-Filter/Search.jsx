@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import React from 'react';
 import { IoMdSearch } from 'react-icons/io';
 import { useContext } from 'react';
 import { CountriesCtx } from '../../contexts/countriesCtx';

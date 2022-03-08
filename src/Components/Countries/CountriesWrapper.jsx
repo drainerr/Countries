@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import styled from 'styled-components';
 import { CountriesCtx } from '../../contexts/countriesCtx';
 import CountryCard from './CountryCard';
+import React from 'react';
 
 const StyledListWrapper = styled.div`
   width: 90%;

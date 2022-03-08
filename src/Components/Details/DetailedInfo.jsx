@@ -1,3 +1,4 @@
+import React from 'react';
 import { useContext } from 'react';
 import { CountriesCtx } from '../../contexts/countriesCtx';
 import ListWrapper from './List';

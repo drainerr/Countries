@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import React from 'react';
 import { HiArrowNarrowLeft } from 'react-icons/hi';
-import { useParams, useHistory } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { CountriesCtx } from '../../contexts/countriesCtx';
 import DetailedInfo from './DetailedInfo';
@@ -36,13 +37,13 @@ const StyledWrapper = styled.div`
 
 const Details = () => {
   const { name } = useParams();
-  const history = useHistory();
+  const navigate = useNavigate();
   const { countries, fetched, loading, dark } = useContext(CountriesCtx);
   const country = countries.find((country) => country.name === name);
 
   return (
     <StyledWrapper dark={dark ? 'dark' : 'light'}>
-      <button onClick={() => history.goBack()}>
+      <button onClick={() => navigate('/')}>
         <HiArrowNarrowLeft /> <span>Back</span>
       </button>
       {fetched && !loading ? <DetailedInfo country={country} dark={dark} /> : 'Loading...'}

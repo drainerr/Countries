@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-
+import React from 'react';
 const StyledListWrapper = styled.ul`
   display: flex;
   align-items: start;
@@ -21,8 +21,16 @@ const StyledListWrapper = styled.ul`
 `;
 
 const ListWrapper = ({ country }) => {
-  const { nativeName, population, region, subregion, capital, domain, currencies, languages } =
-    country;
+  const {
+    nativeName,
+    population,
+    region,
+    subregion,
+    capital,
+    domain,
+    currencies,
+    languages,
+  } = country;
   return (
     <StyledListWrapper>
       <li>

@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { HiOutlineMoon, HiMoon } from 'react-icons/hi';
 import { CountriesCtx } from '../contexts/countriesCtx';
 import StyledHeader from '../styles/StyledHeader';

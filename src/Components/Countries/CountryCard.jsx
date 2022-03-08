@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import { CountriesCtx } from '../../contexts/countriesCtx';
 import { Link } from 'react-router-dom';
 import StyledCard from '../../styles/StyledCard';
+import React from 'react';
 
 const CountryCard = (props) => {
   const { dark } = useContext(CountriesCtx);

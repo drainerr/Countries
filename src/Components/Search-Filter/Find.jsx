@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import React from 'react';
 import Filter from './Filter';
 import Search from './Search';
 const StyledFind = styled.div`
