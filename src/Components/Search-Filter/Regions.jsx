@@ -5,6 +5,7 @@ import React from 'react';
 
 const Regions = ({ show }) => {
   const { dark, filter, setFilter } = useContext(CountriesCtx);
+
   const filterList = (e) => {
     const selectedRegion = e.innerText.trim().toLowerCase();
     setFilter({ ...filter, region: selectedRegion });

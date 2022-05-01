@@ -12,13 +12,12 @@ const useFetch = () => {
   useEffect(() => {
     fetch('https://restcountries.com/v2/all')
       .then((res) => res.json())
-      .then((data) => {
+      .then((countries) => {
         setLoading(true);
-        const filteredCountries = data.filter((country, i) => {
+        const filteredCountries = countries.filter((country, i) => {
           const name = country.name.toLowerCase().trim();
           const region = country.region.toLowerCase().trim();
-          console.log(name.includes(filter.name));
-          if (name.startsWith(filter.name) && region.startsWith(filter.region)) return country;
+          if (name.includes(filter.name) && region.startsWith(filter.region)) return country;
         });
         setFetched(true);
         setCountries(filteredCountries);

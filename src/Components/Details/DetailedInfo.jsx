@@ -19,7 +19,7 @@ const DetailedInfo = ({ country }) => {
     region,
     subregion,
   } = country;
-  console.log(borders);
+
   return (
     <StyledDetailsWrapper dark={dark ? 'dark' : 'light'}>
       <img src={flag} alt="flag" />

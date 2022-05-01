@@ -18,6 +18,7 @@ const StyledListWrapper = styled.div`
 
 const Countries = () => {
   const { countries, loading, fetched } = useContext(CountriesCtx);
+
   return (
     <StyledListWrapper>
       <ul>
