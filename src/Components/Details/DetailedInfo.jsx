@@ -9,7 +9,7 @@ const DetailedInfo = ({ country }) => {
   const {
     name,
     nativeName,
-    borderCountries,
+    borders,
     capital,
     currencies,
     domain,
@@ -19,7 +19,7 @@ const DetailedInfo = ({ country }) => {
     region,
     subregion,
   } = country;
-
+  console.log(borders);
   return (
     <StyledDetailsWrapper dark={dark ? 'dark' : 'light'}>
       <img src={flag} alt="flag" />
@@ -33,15 +33,14 @@ const DetailedInfo = ({ country }) => {
             subregion,
             capital,
             domain,
+            borders,
             currencies,
             languages,
           }}
         />
         <ul className="borders">
           <h4>Border Countries:</h4>
-          {borderCountries.length > 0
-            ? borderCountries.map((ctr, i) => <li key={i}>{`${ctr} `}</li>)
-            : 'None'}
+          {borders ? borders.map((ctr, i) => <li key={i}>{`${ctr} `}</li>) : 'None'}
         </ul>
       </div>
     </StyledDetailsWrapper>

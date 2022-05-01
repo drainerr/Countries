@@ -40,7 +40,6 @@ const Details = () => {
   const navigate = useNavigate();
   const { countries, fetched, loading, dark } = useContext(CountriesCtx);
   const country = countries.find((country) => country.name === name);
-
   return (
     <StyledWrapper dark={dark ? 'dark' : 'light'}>
       <button onClick={() => navigate('/')}>

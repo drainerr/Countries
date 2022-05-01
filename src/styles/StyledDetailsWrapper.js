@@ -38,7 +38,7 @@ const StyledDetailsWrapper = styled.div`
     margin-right: 10px;
   }
  }
- @media(max-width:960px){
+ @media (max-width: 960px){
    flex-direction:column;
    align-items:start;
    padding-bottom:50px;

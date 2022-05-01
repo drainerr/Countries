@@ -5,7 +5,6 @@ import React, { useContext, Fragment } from 'react';
 import { CountriesCtx } from './contexts/countriesCtx';
 import Countries from './Components/Countries/CountriesWrapper';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { Redirect } from 'react-router-dom';
 import Details from './Components/Details/Details';
 
 function App() {
