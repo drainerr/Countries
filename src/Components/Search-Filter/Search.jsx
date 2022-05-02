@@ -1,12 +1,12 @@
 import React from 'react';
 import { IoMdSearch } from 'react-icons/io';
 import { useContext } from 'react';
-import { CountriesCtx } from '../../contexts/countriesCtx';
+import { CountriesCtx } from '../../hooks/useCtx';
 import { useState } from 'react';
 import StyledSearch from '../../styles/StyledSearch';
 
 const Search = () => {
-  const { dark, filter, setFilter } = useContext(CountriesCtx);
+  const { dark, setFilter, filter } = useContext(CountriesCtx);
   const [value, setValue] = useState('');
 
   const handleInput = (e) => {

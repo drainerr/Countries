@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { BiChevronDown, BiChevronUp } from 'react-icons/bi';
 import Regions from './Regions';
 import { useContext, useState } from 'react';
-import { CountriesCtx } from '../../contexts/countriesCtx';
+import { CountriesCtx } from '../../hooks/useCtx';
 import StyledFilter from '../../styles/StyledFilter';
 
 const StyledWrapper = styled.div`
@@ -23,10 +23,10 @@ const Filter = () => {
       <StyledFilter dark={dark ? 'dark' : 'light'}>
         <p>{filter.region ? filter.region : 'Filter by Region'}</p>
         <span onClick={() => setShowMenu(!showMenu)}>
-          {showMenu ? <BiChevronUp /> : <BiChevronDown />}
+          <BiChevronDown />
         </span>
       </StyledFilter>
-      <Regions show={showMenu} />
+      <Regions show={showMenu} setShowMenu={setShowMenu} />
     </StyledWrapper>
   );
 };

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import React from 'react';
+
 const StyledListWrapper = styled.ul`
   display: flex;
   align-items: start;

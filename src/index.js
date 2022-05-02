@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import { ThemeProvider } from 'styled-components';
 import theme from './styles/Theme';
-import CountriesContext from './contexts/countriesCtx';
+import CountriesContext from './hooks/useCtx';
 
 ReactDOM.render(
   <React.StrictMode>

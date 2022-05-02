@@ -1,6 +1,6 @@
 import React from 'react';
 import { useContext } from 'react';
-import { CountriesCtx } from '../../contexts/countriesCtx';
+import { CountriesCtx } from '../../hooks/useCtx';
 import ListWrapper from './List';
 import StyledDetailsWrapper from '../../styles/StyledDetailsWrapper';
 

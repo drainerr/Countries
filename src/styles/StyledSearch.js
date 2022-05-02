@@ -18,7 +18,11 @@ const StyledSearch = styled.div`
     color: inherit;
     width: 100%;
     margin-left: 5px;
+    background-color: ${({ theme, dark }) => theme[`${dark}`].elements};
+    color: ${({ theme, dark }) => theme[`${dark}`].text};
     font-size: ${({ theme }) => theme.fontSize.homePg};
+    transition: inherit;
+
     &::placeholder {
       color: inherit;
     }

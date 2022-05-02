@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { HiOutlineMoon, HiMoon } from 'react-icons/hi';
-import { CountriesCtx } from '../contexts/countriesCtx';
+import { CountriesCtx } from '../hooks/useCtx';
 import StyledHeader from '../styles/StyledHeader';
 
 const Header = () => {

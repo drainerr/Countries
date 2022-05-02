@@ -3,7 +3,7 @@ import React from 'react';
 import { HiArrowNarrowLeft } from 'react-icons/hi';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
-import { CountriesCtx } from '../../contexts/countriesCtx';
+import { CountriesCtx } from '../../hooks/useCtx';
 import DetailedInfo from './DetailedInfo';
 
 const StyledWrapper = styled.div`

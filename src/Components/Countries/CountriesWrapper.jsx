@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import styled from 'styled-components';
-import { CountriesCtx } from '../../contexts/countriesCtx';
+import { CountriesCtx } from '../../hooks/useCtx';
 import CountryCard from './CountryCard';
 import React from 'react';
 
@@ -22,7 +22,7 @@ const Countries = () => {
   return (
     <StyledListWrapper>
       <ul>
-        {fetched && !loading
+        {fetched
           ? countries.map((country) => {
               return (
                 <CountryCard
@@ -35,7 +35,7 @@ const Countries = () => {
                 />
               );
             })
-          : 'Loading...'}
+          : 'Data not found.'}
       </ul>
     </StyledListWrapper>
   );
