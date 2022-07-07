@@ -1,11 +1,11 @@
 {
-  "main.js": "/Countries/static/js/main.f56d6a81.chunk.js",
-  "main.js.map": "/Countries/static/js/main.f56d6a81.chunk.js.map",
-  "static/js/1.786b823b.chunk.js": "/Countries/static/js/1.786b823b.chunk.js",
-  "static/js/1.786b823b.chunk.js.map": "/Countries/static/js/1.786b823b.chunk.js.map",
-  "runtime~main.js": "/Countries/static/js/runtime~main.009e373d.js",
-  "runtime~main.js.map": "/Countries/static/js/runtime~main.009e373d.js.map",
+  "main.js": "/Countries/static/js/main.8f21be6c.chunk.js",
+  "main.js.map": "/Countries/static/js/main.8f21be6c.chunk.js.map",
+  "runtime~main.js": "/Countries/static/js/runtime~main.c4dae36b.js",
+  "runtime~main.js.map": "/Countries/static/js/runtime~main.c4dae36b.js.map",
+  "static/js/2.8a3f68d6.chunk.js": "/Countries/static/js/2.8a3f68d6.chunk.js",
+  "static/js/2.8a3f68d6.chunk.js.map": "/Countries/static/js/2.8a3f68d6.chunk.js.map",
   "index.html": "/Countries/index.html",
-  "precache-manifest.ed8d42aa10a7535dcad8ae96033097ae.js": "/Countries/precache-manifest.ed8d42aa10a7535dcad8ae96033097ae.js",
+  "precache-manifest.59fd8eb48c46dc93b29deb8e52380eaf.js": "/Countries/precache-manifest.59fd8eb48c46dc93b29deb8e52380eaf.js",
   "service-worker.js": "/Countries/service-worker.js"
 }
